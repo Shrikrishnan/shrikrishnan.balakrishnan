@@ -2,91 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shrikrishnan Balakrishnan - Resume</title>
   <style>
-    /* Add your CSS styles here */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
+      color: #333;
     }
     header {
-      text-align: center;
       background-color: #333;
       color: #fff;
+      text-align: center;
       padding: 20px;
-      animation: slideInTop 1s both;
     }
     header h1 {
-      font-size: 36px;
       margin: 0;
+      font-size: 36px;
     }
-    header p {
-      margin: 5px 0;
+    header p, header a {
+      color: #08CE90;
+      text-decoration: none;
+    }
+    header a:hover {
+      text-decoration: underline;
     }
     section {
       padding: 20px;
-      animation: slideInLeft 1s both;
+      margin: 10px auto;
+      max-width: 900px;
+      border-bottom: 1px solid #ccc;
     }
-    /* Animation */
-    @keyframes slideInTop {
-      from {
-        transform: translateY(-100%);
-      }
-      to {
-        transform: translateY(0);
-      }
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
     }
-    @keyframes slideInLeft {
-      from {
-        transform: translateX(-100%);
-      }
-      to {
-        transform: translateX(0);
-      }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+    footer a {
+      color: #08CE90;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Shrikrishnan Balakrishnan</h1>
-    <p>Email: b.shrikrishnan@gmail.com | Phone: 7418144913</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/shrikrishnanbalakrishnan" target="_blank">linkedin.com/in/shrikrishnanbalakrishnan</a></p>
-    <p>GitHub: <a href="https://github.com/Shrikrishnan" target="_blank">github.com/Shrikrishnan</a></p>
+    <p>Email: <a href="mailto:b.shrikrishnan@gmail.com">b.shrikrishnan@gmail.com</a> | Phone: +91-7418144913</p>
+    <p>
+      LinkedIn: <a href="https://linkedin.com/in/shrikrishnanbalakrishnan" target="_blank">linkedin.com/in/shrikrishnanbalakrishnan</a> | 
+      GitHub: <a href="https://github.com/Shrikrishnan" target="_blank">github.com/Shrikrishnan</a> |
+      LeetCode: <a href="https://leetcode.com/b_shrikrishnan/" target="_blank">leetcode.com/b_shrikrishnan</a> |
+      HackerRank: <a href="https://www.hackerrank.com/shrikrishnan" target="_blank">hackerrank.com/shrikrishnan</a>
+    </p>
   </header>
 
   <section>
     <h2>Summary</h2>
     <p>
-      An aspiring Software Engineer with over 3 years of experience in the Software Engineering field, holding a Bachelor of Technology in Computer Science.
+      Senior Software Engineer with over 5 years of experience in developing high-performance, scalable solutions. Proficient in Java, Spring Boot, microservices, and system design, with a focus on creating impactful, resilient systems.
     </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming Languages: Java, J2EE, SQL, Bash, Data Structures and Algorithms</li>
+      <li>Frameworks and Libraries: Spring Boot, JPA, RESTful API, Querydsl, Apache FreeMarker, Kafka</li>
+      <li>Tools: Git, Grafana, GitLab</li>
+      <li>Specializations: High-Level Design (HLD), Low-Level Design (LLD), Problem Solving, Clean Code</li>
+    </ul>
   </section>
 
   <section>
     <h2>Experience</h2>
     <ul>
       <li>
-        <h3>Senior Analyst - Wipro (Oct 2022 - Jun 2023)</h3>
-        <p>Role: Senior Project Engineer</p>
-        <p>Project: Upoint Web Application</p>
-        <p>Skills: Spring Boot, Microservices, Design, OOP, Java, etc.</p>
-        <!-- Add responsibilities and achievements bullet points -->
+        <h3>Senior Software Engineer - Hapag-Lloyd AG, Chennai (Aug 2023 - Present)</h3>
+        <ul>
+          <li>Engineered high-performance software solutions using Java, J2EE, Spring Boot, and JPA, boosting system scalability and maintainability by 30%.</li>
+          <li>Migrated a legacy system to a cloud-based microservices architecture, enhancing scalability and reducing operational costs by 40%.</li>
+          <li>Automated OVS schedule ingestion, reducing manual efforts by 80% and operational costs by 65%.</li>
+          <li>Constructed a Kafka-based data pipeline to migrate 578 million records from DB2 to PostgreSQL with zero downtime.</li>
+        </ul>
       </li>
-      <!-- Add other experiences in a similar format -->
+      <li>
+        <h3>Senior Analyst - Wipro, Chennai (Oct 2022 - Jun 2023)</h3>
+        <ul>
+          <li>Designed and optimized Java applications and Spring Boot services for improved performance.</li>
+          <li>Facilitated daily scrum meetings, enhancing team communication and ensuring timely updates on sprints.</li>
+          <li>Managed a team of three, fostering collaboration and knowledge sharing to enhance project outcomes.</li>
+          <li>Reduced operational costs by 50% through efficient codebase optimization and development practices.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Analyst - Wipro, Chennai (Jun 2021 - Sep 2022)</h3>
+        <ul>
+          <li>Achieved promotion within one year by delivering strong performance and exceeding organizational expectations.</li>
+          <li>Owned and delivered small modules with high quality, ensuring timely deployment to production.</li>
+          <li>Resolved technical issues efficiently, maintaining high software quality standards.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Associate Analyst - Wipro, Chennai (Feb 2020 - May 2021)</h3>
+        <ul>
+          <li>Streamlined communication and reporting, improving issue resolution efficiency by 30%.</li>
+          <li>Automated web application testing processes, reducing regression testing time by 75%.</li>
+          <li>Maintained and debugged codebases for multiple web applications, reducing critical bugs by 95%.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Trainee - Wipro, Chennai (Sep 2019 - Jan 2020)</h3>
+        <ul>
+          <li>Contributed to the SDLC for diverse interfaces, improving delivery timelines by 15%.</li>
+          <li>Executed comprehensive testing procedures for GUI, Web, and Mobile App interfaces, increasing defect detection rates by 20%.</li>
+          <li>Acquired in-depth knowledge of the 401(k) retirement plan, facilitating informed discussions with stakeholders.</li>
+        </ul>
+      </li>
     </ul>
   </section>
 
   <section>
     <h2>Education</h2>
-    <p>Full Stack Backend Development, Software Engineering - Scaler (May 2022 - Present)</p>
-    <p>Bachelor of Technology (B.Tech.), Computer Science Engineering - Shanmugha Arts, Science, Technology and Research Academy (2015 - 2019)</p>
+    <ul>
+      <li>Scaler Academy (2025) - Specialized in Software Development & Problem Solving</li>
+      <li>SASTRA University (2019) - B.Tech in Computer Science Engineering</li>
+    </ul>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <p>Spring Boot, Microservices, Software Engineers, Time Management, OOP, Core Java, Data Structures and Algorithms, Java</p>
-  </section>
+  <footer>
+    <p>© 2024 Shrikrishnan Balakrishnan | <a href="https://shrikrishnan.github.io/ShrikrishnanBalakrishnan/" target="_blank">Visit My Website</a></p>
+  </footer>
 </body>
 </html>
