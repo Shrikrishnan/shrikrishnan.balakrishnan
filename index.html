@@ -3,143 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shrikrishnan Balakrishnan - Resume</title>
+  <title>Shrikrishnan Balakrishnan - Portfolio</title>
   <style>
+    /* General Styles */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
       color: #333;
+      line-height: 1.6;
     }
+    h1, h2, h3 {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #08CE90;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    /* Header Styles */
     header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
+      background: linear-gradient(135deg, #4CAF50, #087F5B);
+      color: white;
       padding: 20px;
+      text-align: center;
+      position: relative;
     }
     header h1 {
-      margin: 0;
-      font-size: 36px;
+      font-size: 48px;
+      margin-bottom: 10px;
     }
-    header p, header a {
-      color: #08CE90;
-      text-decoration: none;
+    header p {
+      margin: 10px 0;
+      font-size: 18px;
     }
-    header a:hover {
-      text-decoration: underline;
+    header .contact-links {
+      margin-top: 20px;
+    }
+    header .contact-links a {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://source.unsplash.com/1200x600/?technology,programming') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Main Content Styles */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
     }
     section {
       padding: 20px;
-      margin: 10px auto;
-      max-width: 900px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #ddd;
     }
-    h2 {
-      font-size: 24px;
-      color: #333;
+    section:last-child {
+      border-bottom: none;
+    }
+    section h2 {
+      font-size: 28px;
+      color: #087F5B;
       margin-bottom: 10px;
     }
-    ul {
-      list-style-type: square;
+    section ul {
+      margin-top: 10px;
       padding-left: 20px;
     }
+    section ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Timeline Section */
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #087F5B;
+    }
+    .timeline li {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      background: #087F5B;
+      border-radius: 50%;
+    }
+
+    /* Footer Styles */
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
+      background: #333;
+      color: white;
+      padding: 15px 10px;
+      font-size: 16px;
     }
     footer a {
       color: #08CE90;
-      text-decoration: none;
+    }
+
+    /* Animations */
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out both;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 36px;
+      }
+      .container {
+        width: 95%;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <h1>Shrikrishnan Balakrishnan</h1>
-    <p>Email: <a href="mailto:b.shrikrishnan@gmail.com">b.shrikrishnan@gmail.com</a> | Phone: +91-7418144913</p>
-    <p>
-      LinkedIn: <a href="https://linkedin.com/in/shrikrishnanbalakrishnan" target="_blank">linkedin.com/in/shrikrishnanbalakrishnan</a> | 
-      GitHub: <a href="https://github.com/Shrikrishnan" target="_blank">github.com/Shrikrishnan</a> |
-      LeetCode: <a href="https://leetcode.com/b_shrikrishnan/" target="_blank">leetcode.com/b_shrikrishnan</a> |
-      HackerRank: <a href="https://www.hackerrank.com/shrikrishnan" target="_blank">hackerrank.com/shrikrishnan</a>
-    </p>
+    <p>Senior Software Engineer | Java, Spring Boot, Microservices</p>
+    <div class="contact-links">
+      <a href="mailto:b.shrikrishnan@gmail.com">Email Me</a>
+      <a href="https://linkedin.com/in/shrikrishnanbalakrishnan" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Shrikrishnan" target="_blank">GitHub</a>
+      <a href="https://leetcode.com/b_shrikrishnan/" target="_blank">LeetCode</a>
+    </div>
   </header>
 
-  <section>
-    <h2>Summary</h2>
-    <p>
-      Senior Software Engineer with over 5 years of experience in developing high-performance, scalable solutions. Proficient in Java, Spring Boot, microservices, and system design, with a focus on creating impactful, resilient systems.
-    </p>
-  </section>
+  <div class="hero fade-in">
+    Building Scalable and Impactful Software Systems
+  </div>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Programming Languages: Java, J2EE, SQL, Bash, Data Structures and Algorithms</li>
-      <li>Frameworks and Libraries: Spring Boot, JPA, RESTful API, Querydsl, Apache FreeMarker, Kafka</li>
-      <li>Tools: Git, Grafana, GitLab</li>
-      <li>Specializations: High-Level Design (HLD), Low-Level Design (LLD), Problem Solving, Clean Code</li>
-    </ul>
-  </section>
+  <div class="container">
+    <section class="fade-in">
+      <h2>About Me</h2>
+      <p>
+        Senior Software Engineer with over 5 years of experience in developing scalable, high-performance software solutions.
+        Proficient in Java, Spring Boot, microservices architecture, and system design, with a focus on creating impactful
+        and resilient systems.
+      </p>
+    </section>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <h3>Senior Software Engineer - Hapag-Lloyd AG, Chennai (Aug 2023 - Present)</h3>
-        <ul>
-          <li>Engineered high-performance software solutions using Java, J2EE, Spring Boot, and JPA, boosting system scalability and maintainability by 30%.</li>
-          <li>Migrated a legacy system to a cloud-based microservices architecture, enhancing scalability and reducing operational costs by 40%.</li>
-          <li>Automated OVS schedule ingestion, reducing manual efforts by 80% and operational costs by 65%.</li>
-          <li>Constructed a Kafka-based data pipeline to migrate 578 million records from DB2 to PostgreSQL with zero downtime.</li>
-        </ul>
-      </li>
-      <li>
-        <h3>Senior Analyst - Wipro, Chennai (Oct 2022 - Jun 2023)</h3>
-        <ul>
-          <li>Designed and optimized Java applications and Spring Boot services for improved performance.</li>
-          <li>Facilitated daily scrum meetings, enhancing team communication and ensuring timely updates on sprints.</li>
-          <li>Managed a team of three, fostering collaboration and knowledge sharing to enhance project outcomes.</li>
-          <li>Reduced operational costs by 50% through efficient codebase optimization and development practices.</li>
-        </ul>
-      </li>
-      <li>
-        <h3>Analyst - Wipro, Chennai (Jun 2021 - Sep 2022)</h3>
-        <ul>
-          <li>Achieved promotion within one year by delivering strong performance and exceeding organizational expectations.</li>
-          <li>Owned and delivered small modules with high quality, ensuring timely deployment to production.</li>
-          <li>Resolved technical issues efficiently, maintaining high software quality standards.</li>
-        </ul>
-      </li>
-      <li>
-        <h3>Associate Analyst - Wipro, Chennai (Feb 2020 - May 2021)</h3>
-        <ul>
-          <li>Streamlined communication and reporting, improving issue resolution efficiency by 30%.</li>
-          <li>Automated web application testing processes, reducing regression testing time by 75%.</li>
-          <li>Maintained and debugged codebases for multiple web applications, reducing critical bugs by 95%.</li>
-        </ul>
-      </li>
-      <li>
-        <h3>Trainee - Wipro, Chennai (Sep 2019 - Jan 2020)</h3>
-        <ul>
-          <li>Contributed to the SDLC for diverse interfaces, improving delivery timelines by 15%.</li>
-          <li>Executed comprehensive testing procedures for GUI, Web, and Mobile App interfaces, increasing defect detection rates by 20%.</li>
-          <li>Acquired in-depth knowledge of the 401(k) retirement plan, facilitating informed discussions with stakeholders.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+    <section class="fade-in">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> Java, J2EE, SQL, Bash, Data Structures and Algorithms</li>
+        <li><strong>Frameworks:</strong> Spring Boot, JPA, Querydsl, Apache FreeMarker</li>
+        <li><strong>Tools:</strong> Git, Grafana, GitLab</li>
+        <li><strong>Specializations:</strong> High-Level Design (HLD), Low-Level Design (LLD), Problem Solving</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>Scaler Academy (2025) - Specialized in Software Development & Problem Solving</li>
-      <li>SASTRA University (2019) - B.Tech in Computer Science Engineering</li>
-    </ul>
-  </section>
+    <section class="fade-in">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li>
+          <h3>Senior Software Engineer - Hapag-Lloyd AG (Aug 2023 - Present)</h3>
+          <ul>
+            <li>Migrated a legacy mainframe system to a cloud-based microservices architecture, reducing operational costs by 40%.</li>
+            <li>Constructed a Kafka-based pipeline to migrate 578M records with zero downtime.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Senior Analyst - Wipro (Oct 2022 - Jun 2023)</h3>
+          <ul>
+            <li>Optimized existing Spring Boot services for improved performance, cutting costs by 50%.</li>
+            <li>Led a team of three engineers to deliver quality software aligned with client needs.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Analyst - Wipro (Jun 2021 - Sep 2022)</h3>
+          <ul>
+            <li>Owned and delivered small modules, ensuring timely deployment with high quality.</li>
+            <li>Wrote defect-free code, maintaining high software standards.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2>Education</h2>
+      <ul>
+        <li>Scaler Academy (2025) - Specialization in Software Development & Problem Solving</li>
+        <li>SASTRA University (2019) - B.Tech in Computer Science Engineering</li>
+      </ul>
+    </section>
+  </div>
 
   <footer>
     <p>© 2024 Shrikrishnan Balakrishnan | <a href="https://shrikrishnan.github.io/ShrikrishnanBalakrishnan/" target="_blank">Visit My Website</a></p>
