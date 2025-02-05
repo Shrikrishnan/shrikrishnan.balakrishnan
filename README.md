@@ -2,6 +2,6 @@
 
 My Personal Website .
 
-Host Link : https://shrikrishnan.github.io/ShrikrishnanBalakrishnan/ 
+Host Link : https://shrikrishnan.github.io/shrikrishnan.balakrishnan/
 
-Wirten in HTML CSS. 
+Wirten in HTML CSS  and java script.
