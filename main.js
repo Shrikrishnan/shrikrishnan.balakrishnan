@@ -49,8 +49,15 @@ function updateExperienceTimer() {
     { startDate: "2019-09-09", endDate: "2023-06-29" } // WIPRO HR SERVICES INDIA PVT. LTD.
   ];
   const total = sumPeriods(periods);
-  document.getElementById("experience-timer").textContent =
-    `${total.years} years, ${total.months} months, ${total.days} days`;
+  const expStr = `${total.years} years, ${total.months} months, ${total.days} days`;
+  document.getElementById("experience-timer").textContent = expStr;
+
+  // Set dynamic download filename
+  const resumeBtn = document.getElementById("resume-download");
+  if (resumeBtn) {
+    const fileName = `Shrikrishnan_${total.years}y_${total.months}m_${total.days}d.pdf`;
+    resumeBtn.setAttribute('download', fileName);
+  }
 }
 
 updateExperienceTimer();
