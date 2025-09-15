@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main   # Deploy whenever you push to main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages   # Required for GitHub Pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write      # Required for GitHub Pages
+      id-token: write   # Required for OIDC authentication
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .   # Upload everything (index.html, styles.css, script.js)
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
