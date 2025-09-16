@@ -1,4 +1,5 @@
 body {
+    padding-top: 70px;
   font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -28,15 +29,35 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 60px 20px 20px 20px;
-  background: transparent;
-  z-index: 1;
-  position: relative;
+  position: fixed;
+  /* Stays at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  /* 🔥 Smaller fixed height */
+  background: rgba(33, 37, 52, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 0 20px;
+  /* Less padding */
   opacity: 0;
   transform: translateY(-40px);
   animation: headerIn 1.2s cubic-bezier(.7, .15, .19, 1.2) forwards;
 }
+
+header h1,
+header .typewriter {
+  font-size: 1.3rem;
+  /* Smaller text size */
+  margin: 0;
+  white-space: nowrap;
+}
+
 
 @keyframes headerIn {
   to {
@@ -114,6 +135,96 @@ header {
   animation: pulseBtn 0.8s;
 }
 
+/* Contact Box */
+#contact {
+  background: linear-gradient(135deg, rgba(40, 44, 70, 0.95), rgba(25, 28, 45, 0.95));
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(80, 155, 255, 0.22), 0 0 42px rgba(60, 120, 255, 0.13);
+  max-width: 640px;
+  margin: 50px auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #eaeaea;
+  position: relative;
+  overflow: hidden;
+  animation: glowBox 2s ease-in-out infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glowBox {
+  from {
+    box-shadow: 0 0 12px rgba(80, 155, 255, 0.18), 0 0 22px rgba(60, 120, 255, 0.12);
+  }
+
+  to {
+    box-shadow: 0 0 20px rgba(80, 155, 255, 0.35), 0 0 50px rgba(60, 120, 255, 0.25);
+  }
+}
+
+/* Title */
+#contact .section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #a6cbff;
+  text-shadow: 0 0 18px rgba(100, 180, 255, 0.5);
+}
+
+/* Contact Info */
+#contact .contact-info p {
+  margin: 14px 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #d8d8d8;
+}
+
+/* Links */
+#contact a {
+  text-decoration: none;
+  color: #5dbbff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#contact a:hover {
+  color: #fff;
+  text-shadow: 0 0 16px #40a0ff;
+}
+
+/* Slide-in Animation */
+.contact-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideIn 0.8s ease forwards;
+}
+
+.contact-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.contact-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.contact-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.contact-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.contact-item:nth-child(5) {
+  animation-delay: 1s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes pulseBtn {
   0% {
     box-shadow: 0 0 0 0 #4896ff77;
@@ -178,6 +289,7 @@ header {
     transform: translateY(0) scale(1);
   }
 }
+
 
 h2 {
   color: #a6cbff;
